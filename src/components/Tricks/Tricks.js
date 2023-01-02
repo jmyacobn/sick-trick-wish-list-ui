@@ -4,7 +4,6 @@ import './Tricks.css';
 
 const Tricks = ( {tricks} ) => {
   const eachTrick = tricks.map(trick => {
-    console.log(trick)
     return (
       <Card
         id={trick.id}
