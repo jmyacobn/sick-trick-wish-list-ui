@@ -3,11 +3,22 @@ import Card from '../Cards/Card'
 import './Tricks.css';
 
 const Tricks = ( {tricks} ) => {
+  const eachTrick = tricks.map(trick => {
+    console.log(trick)
+    return (
+      <Card
+        id={trick.id}
+        stance={trick.stance}
+        name={trick.name}
+        obstacle={trick.obstacle}
+        tutorial={trick.tutorial}
+      />
+    )
+  })
+
   return (
     <div className='tricks-container'>
-      <Card />
-      <Card />
-      <Card />
+      {eachTrick}
     </div>
   )
 }
